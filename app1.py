@@ -1,5 +1,6 @@
 import streamlit as st
 import base64
+import PyPDF2
 from PyPDF2 import PdfReader
 import pandas as pd
 from nltk.tokenize import sent_tokenize
