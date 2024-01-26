@@ -15,7 +15,7 @@ def get_esg_scores(sentence):
         scores = esg_pipeline(sentence)
         return {score['label']: score['score'] for score in scores}
     except RuntimeError as e:
-        print(f"Error for sentence number : {row}. Skipping row. Error details: {e}")
+        print(f"Error for sentence number : {sentence}. Skipping row. Error details: {e}")
         return None
 
 # Function to calculate average scores from a DataFrame
