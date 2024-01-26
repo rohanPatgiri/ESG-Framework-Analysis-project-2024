@@ -7,7 +7,7 @@ import torch
 model_name = "yiyanghkust/finbert-esg"
 model = BertForSequenceClassification.from_pretrained(model_name)
 tokenizer = BertTokenizer.from_pretrained(model_name)
-esg_pipeline = pipeline("text-classification", model=model, tokenizer=tokenizer, truncation=True)
+esg_pipeline = pipeline("text-classification", model=model, tokenizer=tokenizer)
 
 # Function to get E, S, G scores for a sentence
 def get_esg_scores(sentence):
